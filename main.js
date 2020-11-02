@@ -30,7 +30,7 @@
 
 //=============================================
 // METODO 2 - lavoro su classe .hamburger-menu.active
-
+//
 // $('.header-right .fas').click(function() {
 //   $('.hamburger-menu').addClass('active');
 // });
@@ -48,17 +48,20 @@
 //in questo metodo ritocco il metodo 1 eliminando il problema della non chiusura dell'hamburger quando il display va a +1000 px usando il winddow.matchMedia
 
 
-// if (window.matchMedia("(max-width: 1000px)").matches) {
-//   $('.header-right .fas').click(function() {
-//     $('.hamburger-menu').show();
-//   });
-//
-//   $('.hamburger-menu .fas').click(function() {
-//     $('.hamburger-menu').hide();
-//   });
-// };
+if (window.matchMedia("(max-width: 1000px)").matches) {
+  $('.header-right .fas').click(function() {
+    $('.hamburger-menu').show();
+  });
+
+  $('.hamburger-menu .fas').click(function() {
+    $('.hamburger-menu').hide();
+  });
+} else if (window.matchMedia("(min-width: 999px)").matches) {
+  $('.hamburger-menu').hide();
+
+}
 
 //-----------------------------------------------------------
 
 
-console.log('ciao');
+// console.log('ciao');
